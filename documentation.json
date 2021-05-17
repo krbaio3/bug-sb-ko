@@ -1,0 +1,610 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-a4c0374741bad79a777bb421696dba81",
+            "file": "projects/demo/src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<p>\n  <css-slide label=\"ejemplo2\" (changeEvent)=\"handlerChangeEvent($event)\"></css-slide>\n</p>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "handlerChangeEvent",
+                    "args": [
+                        {
+                            "name": "$event",
+                            "type": "MatSlideToggleChange"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14,
+                    "jsdoctags": [
+                        {
+                            "name": "$event",
+                            "type": "MatSlideToggleChange",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { MatSlideToggleChange } from '@angular/material/slide-toggle';\n\n@Component({\n  selector: 'app-root',\n  template: `\n    <p>\n      <css-slide label=\"ejemplo2\" (changeEvent)=\"handlerChangeEvent($event)\"></css-slide>\n    </p>\n  `,\n  styles: []\n})\nexport class AppComponent {\n  handlerChangeEvent($event: MatSlideToggleChange) {\n    console.log($event)\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": ""
+        },
+        {
+            "name": "SlideComponent",
+            "id": "component-SlideComponent-fab63291950f5b15b7b0ae0ce5ab039d",
+            "file": "projects/components/src/lib/slide/slide.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "css-slide",
+            "styleUrls": [],
+            "styles": [
+                ""
+            ],
+            "template": "<mat-slide-toggle\n  (change)=\"onInnerChange($event)\"\n  (toggleChange)=\"onInnerToggleChange($event)\"\n  [aria-label]=\"ariaLabel\"\n  [color]=\"color\"\n  [disabled]=\"disabled\"\n  [labelPosition]=\"labelPosition\"\n>\n  {{ label }}\n</mat-slide-toggle>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "ariaLabel",
+                    "description": "<p>Aria Label</p>\n",
+                    "line": 35,
+                    "type": "string"
+                },
+                {
+                    "name": "color",
+                    "defaultValue": "MaterialColor.Primary",
+                    "description": "<p>Color del slider</p>\n",
+                    "line": 48,
+                    "type": "ThemePalette"
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "description": "<p>Disabled</p>\n",
+                    "line": 55,
+                    "type": "boolean"
+                },
+                {
+                    "name": "label",
+                    "description": "<p>Texto del slider</p>\n",
+                    "line": 29,
+                    "type": "string"
+                },
+                {
+                    "name": "labelPosition",
+                    "defaultValue": "LabelPosition.After",
+                    "description": "<p>Whether the label should appear after or before the slide-toggle. Defaults to &#39;after&#39;.</p>\n",
+                    "line": 41,
+                    "type": "LabelPosition"
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "changeEvent",
+                    "defaultValue": "new EventEmitter<MatSlideToggleChange>()",
+                    "description": "<p>Optional change handler</p>\n",
+                    "line": 61,
+                    "type": "EventEmitter<MatSlideToggleChange>"
+                },
+                {
+                    "name": "toggleChange",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "description": "<p>Optional toggleChange handler</p>\n",
+                    "line": 75,
+                    "type": "EventEmitter<void>"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "onInnerChange",
+                    "args": [
+                        {
+                            "name": "$event",
+                            "type": "MatSlideToggleChange"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 67,
+                    "description": "<p>onInnerChange: change handle event</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": {
+                                "pos": 1335,
+                                "end": 1341,
+                                "flags": 0,
+                                "escapedText": "$event"
+                            },
+                            "type": "MatSlideToggleChange",
+                            "tagName": {
+                                "pos": 1329,
+                                "end": 1334,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "onInnerToggleChange",
+                    "args": [
+                        {
+                            "name": "$event",
+                            "type": "void"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 81,
+                    "description": "",
+                    "jsdoctags": [
+                        {
+                            "name": {
+                                "pos": 1582,
+                                "end": 1588,
+                                "flags": 0,
+                                "escapedText": "$event"
+                            },
+                            "type": "void",
+                            "tagName": {
+                                "pos": 1576,
+                                "end": 1581,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from \"@angular/core\";\nimport { LabelPosition, MaterialColor } from \"../config/config\";\n\nimport { MatSlideToggleChange } from \"@angular/material/slide-toggle\";\nimport { ThemePalette } from \"@angular/material/core\";\n\n@Component({\n  selector: \"css-slide\",\n  template: `\n    <mat-slide-toggle\n      (change)=\"onInnerChange($event)\"\n      (toggleChange)=\"onInnerToggleChange($event)\"\n      [aria-label]=\"ariaLabel\"\n      [color]=\"color\"\n      [disabled]=\"disabled\"\n      [labelPosition]=\"labelPosition\"\n    >\n      {{ label }}\n    </mat-slide-toggle>\n  `,\n  styles: [``],\n})\nexport class SlideComponent {\n  /**\n   * Texto del slider\n   * @required\n   */\n  @Input()\n  label: string;\n\n  /**\n   * Aria Label\n   */\n  @Input()\n  ariaLabel: string;\n\n  /**\n   * Whether the label should appear after or before the slide-toggle. Defaults to 'after'.\n   */\n  @Input()\n  labelPosition: LabelPosition = LabelPosition.After;\n\n  /**\n   * Color del slider\n   *\n   */\n  @Input()\n  color: ThemePalette = MaterialColor.Primary;\n\n  /**\n   * Disabled\n   *\n   */\n  @Input()\n  disabled: boolean = false;\n\n  /**\n   * Optional change handler\n   */\n  @Output()\n  changeEvent: EventEmitter<MatSlideToggleChange> = new EventEmitter<MatSlideToggleChange>();\n\n  /**\n   * onInnerChange: change handle event\n   * @param $event\n   */\n  onInnerChange($event: MatSlideToggleChange) {\n    this.changeEvent.emit($event);\n  }\n\n  /**\n   * Optional toggleChange handler\n   */\n  @Output()\n  toggleChange: EventEmitter<void> = new EventEmitter<void>();\n\n  /**\n   *\n   * @param $event\n   */\n  onInnerToggleChange($event: void) {\n    this.toggleChange.emit($event);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "PatternLibModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "PatternLibModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "SlideModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "SlideModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "SlideModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "SlideComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "SlideComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/components/src/test.ts",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/demo/src/environments/environment.prod.ts",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/demo/src/environments/environment.ts",
+                "type": "object",
+                "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/components/src/test.ts",
+                "type": "literal type"
+            },
+            {
+                "name": "Slide",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/slide/Slide.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/slide/Slide.stories.ts",
+                "type": "Story<SliderComponent>",
+                "defaultValue": "(args: SliderComponent) => ({\n  // component: SliderComponent,\n  props: args,\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [
+            {
+                "name": "LabelPosition",
+                "childs": [
+                    {
+                        "name": "Before",
+                        "value": "before"
+                    },
+                    {
+                        "name": "After",
+                        "value": "after"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "description": "",
+                "file": "projects/components/src/lib/config/config.ts"
+            },
+            {
+                "name": "MaterialColor",
+                "childs": [
+                    {
+                        "name": "Primary",
+                        "value": "primary"
+                    },
+                    {
+                        "name": "Accent",
+                        "value": "accent"
+                    },
+                    {
+                        "name": "Warn",
+                        "value": "warn"
+                    },
+                    {
+                        "name": "Normal",
+                        "value": "normal"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "description": "",
+                "file": "projects/components/src/lib/config/config.ts"
+            }
+        ],
+        "groupedVariables": {
+            "projects/components/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/components/src/test.ts",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/components/src/test.ts",
+                    "type": "literal type"
+                }
+            ],
+            "projects/demo/src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/demo/src/environments/environment.prod.ts",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "projects/demo/src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/demo/src/environments/environment.ts",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "stories/slide/Slide.stories.ts": [
+                {
+                    "name": "Slide",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/slide/Slide.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/slide/Slide.stories.ts",
+                    "type": "Story<SliderComponent>",
+                    "defaultValue": "(args: SliderComponent) => ({\n  // component: SliderComponent,\n  props: args,\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {
+            "projects/components/src/lib/config/config.ts": [
+                {
+                    "name": "LabelPosition",
+                    "childs": [
+                        {
+                            "name": "Before",
+                            "value": "before"
+                        },
+                        {
+                            "name": "After",
+                            "value": "after"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "description": "",
+                    "file": "projects/components/src/lib/config/config.ts"
+                },
+                {
+                    "name": "MaterialColor",
+                    "childs": [
+                        {
+                            "name": "Primary",
+                            "value": "primary"
+                        },
+                        {
+                            "name": "Accent",
+                            "value": "accent"
+                        },
+                        {
+                            "name": "Warn",
+                            "value": "warn"
+                        },
+                        {
+                            "name": "Normal",
+                            "value": "normal"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "description": "",
+                    "file": "projects/components/src/lib/config/config.ts"
+                }
+            ]
+        },
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 10,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/components/src/lib/slide/slide.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SlideComponent",
+                "coveragePercent": 80,
+                "coverageCount": "8/10",
+                "status": "very-good"
+            },
+            {
+                "filePath": "projects/components/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/components/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/demo/src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/demo/src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/demo/src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/slide/Slide.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Slide",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/slide/Slide.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}
